@@ -1,58 +1,26 @@
-import type { MarbleAuthorList, MarbleCategoryList, MarblePost, MarblePostList, MarbleTagList } from '@/types/marble';
-import { createServerFn } from "@tanstack/react-start";
-import { z } from "zod";
-
-const url = process.env.MARBLE_API_URL;
-const key = process.env.MARBLE_WORKSPACE_KEY;
+import type { MarbleAuthorList, MarbleCategoryList, MarblePost, MarblePostList, MarbleTagList } from '@/types/marble'
+import { createServerFn } from '@tanstack/react-start'
+import { z } from 'zod'
+import { requestJson } from '@/lib/http'
 
 export const getPosts = createServerFn().handler(async () => {
-  try {
-    const raw = await fetch(`${url}/${key}/posts`);
-    const data: MarblePostList = await raw.json();
-    return data;
-  } catch (error) {
-    console.log(error);
-  }
-});
+  return await requestJson<MarblePostList>('posts')
+})
 
 export const getTags = createServerFn().handler(async () => {
-    try {
-      const raw = await fetch(`${url}/${key}/tags`);
-      const data: MarbleTagList = await raw.json();
-      return data;
-    } catch (error) {
-      console.log(error);
-    }
-  });
+  return await requestJson<MarbleTagList>('tags')
+})
 
 export const getSinglePost = createServerFn()
   .inputValidator(z.string())
   .handler(async ({ data: slug }) => {
-    try {
-      const raw = await fetch(`${url}/${key}/posts/${slug}`);
-      const data: MarblePost = await raw.json();
-      return data;
-    } catch (error) {
-      console.log(error);
-    }
-  });
+    return await requestJson<MarblePost>(`posts/${slug}`)
+  })
 
 export const getCategories = createServerFn().handler(async () => {
-  try {
-    const raw = await fetch(`${url}/${key}/categories`);
-    const data: MarbleCategoryList = await raw.json();
-    return data;
-  } catch (error) {
-    console.log(error);
-  }
-});
+  return await requestJson<MarbleCategoryList>('categories')
+})
 
 export const getAuthors = createServerFn().handler(async () => {
-  try {
-    const raw = await fetch(`${url}/${key}/authors`);
-    const data: MarbleAuthorList = await raw.json();
-    return data;
-  } catch (error) {
-    console.log(error);
-  }
-});
+  return await requestJson<MarbleAuthorList>('authors')
+})
