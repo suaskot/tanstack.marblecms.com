@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { getSinglePost } from "@/lib/query";
 import { Prose } from "@/components/Prose";
+import { ImageWithFallback } from "@/components/ImageWithFallback";
 
 export const Route = createFileRoute("/posts/$slug")({
   component: PostPage,
@@ -32,15 +33,13 @@ function PostPage() {
             {post.title}
           </h1>
           
-          {post.coverImage && (
-            <div className="aspect-video md:aspect-[2/1] bg-gray-200 rounded-lg overflow-hidden mb-6">
-              <img 
-                src={post.coverImage} 
-                alt={post.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          )}
+          <div className="aspect-video md:aspect-[2/1] bg-gray-200 rounded-lg overflow-hidden mb-6">
+            <ImageWithFallback
+              src={post.coverImage}
+              alt={post.title}
+              className="w-full h-full object-cover"
+            />
+          </div>
           
           <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-600 mb-8">
             <time dateTime={new Date(post.publishedAt).toISOString()}>

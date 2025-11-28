@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { getPosts } from "@/lib/query";
 import { Link } from "@tanstack/react-router";
+import { ImageWithFallback } from "@/components/ImageWithFallback";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -38,8 +39,8 @@ function HomePage() {
               className="group flex flex-col overflow-hidden"
             >
               <div className="aspect-video bg-gray-200 overflow-hidden">
-                <img 
-                  src={post.coverImage} 
+                <ImageWithFallback
+                  src={post.coverImage}
                   alt={post.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
                 />
