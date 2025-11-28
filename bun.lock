@@ -5,32 +5,33 @@
     "": {
       "name": "tanstack-start",
       "dependencies": {
-        "@tailwindcss/vite": "^4.0.6",
+        "@tailwindcss/vite": "^4.1.17",
         "@tanstack/react-devtools": "^0.2.2",
-        "@tanstack/react-router": "^1.130.2",
-        "@tanstack/react-router-devtools": "^1.131.5",
-        "@tanstack/react-router-ssr-query": "^1.131.7",
-        "@tanstack/react-start": "^1.131.7",
-        "@tanstack/router-plugin": "^1.121.2",
+        "@tanstack/react-router": "^1.139.10",
+        "@tanstack/react-router-devtools": "^1.139.10",
+        "@tanstack/react-router-ssr-query": "^1.139.10",
+        "@tanstack/react-start": "^1.139.10",
+        "@tanstack/router-plugin": "^1.139.10",
         "clsx": "^2.1.1",
-        "react": "^19.0.0",
-        "react-dom": "^19.0.0",
-        "tailwind-merge": "^3.3.1",
-        "tailwindcss": "^4.0.6",
+        "react": "^19.2.0",
+        "react-dom": "^19.2.0",
+        "tailwind-merge": "^3.4.0",
+        "tailwindcss": "^4.1.17",
         "vite-tsconfig-paths": "^5.1.4",
-        "zod": "^4.1.11",
+        "zod": "^4.1.13",
       },
       "devDependencies": {
-        "@tailwindcss/typography": "^0.5.18",
-        "@testing-library/dom": "^10.4.0",
-        "@testing-library/react": "^16.2.0",
-        "@types/react": "^19.0.8",
-        "@types/react-dom": "^19.0.3",
-        "@vitejs/plugin-react": "^4.3.4",
-        "jsdom": "^26.0.0",
-        "typescript": "^5.7.2",
-        "vite": "^6.3.5",
-        "vitest": "^3.0.5",
+        "@tailwindcss/typography": "^0.5.19",
+        "@testing-library/dom": "^10.4.1",
+        "@testing-library/react": "^16.3.0",
+        "@types/node": "^24.10.1",
+        "@types/react": "^19.2.7",
+        "@types/react-dom": "^19.2.3",
+        "@vitejs/plugin-react": "^4.7.0",
+        "jsdom": "^26.1.0",
+        "typescript": "^5.9.3",
+        "vite": "^6.4.1",
+        "vitest": "^3.2.4",
         "web-vitals": "^4.2.4",
       },
     },
@@ -343,6 +344,8 @@
     "@types/deep-eql": ["@types/deep-eql@4.0.2", "", {}, "sha512-c9h9dVVMigMPc4bwTvC5dxqtqJZwQPePsWjPlpSOnojbor6pGqdk541lfA7AqFQr5pB1BRdq0juY9db81BwyFw=="],
 
     "@types/estree": ["@types/estree@1.0.8", "", {}, "sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w=="],
+
+    "@types/node": ["@types/node@24.10.1", "", { "dependencies": { "undici-types": "~7.16.0" } }, "sha512-GNWcUTRBgIRJD5zj+Tq0fKOJ5XZajIiBroOF0yvj2bSU1WvNdYS/dn9UxwsujGW4JX06dnHyjV2y9rRaybH0iQ=="],
 
     "@types/react": ["@types/react@19.2.7", "", { "dependencies": { "csstype": "^3.2.2" } }, "sha512-MWtvHrGZLFttgeEj28VXHxpmwYbor/ATPYbBfSFZEIRK0ecCFLl2Qo55z52Hss+UV9CRN7trSeq1zbgx7YDWWg=="],
 
@@ -697,6 +700,8 @@
     "ufo": ["ufo@1.6.1", "", {}, "sha512-9a4/uxlTWJ4+a5i0ooc1rU7C7YOw3wT+UGqdeNNHWnOF9qcMBgLRS+4IYUqbczewFx4mLEig6gawh7X6mFlEkA=="],
 
     "undici": ["undici@7.16.0", "", {}, "sha512-QEg3HPMll0o3t2ourKwOeUAZ159Kn9mx5pnzHRQO8+Wixmh88YdZRiIwat0iNzNNXn0yoEtXJqFpyW7eM8BV7g=="],
+
+    "undici-types": ["undici-types@7.16.0", "", {}, "sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw=="],
 
     "unplugin": ["unplugin@2.3.10", "", { "dependencies": { "@jridgewell/remapping": "^2.3.5", "acorn": "^8.15.0", "picomatch": "^4.0.3", "webpack-virtual-modules": "^0.6.2" } }, "sha512-6NCPkv1ClwH+/BGE9QeoTIl09nuiAt0gS28nn1PvYXsGKRwM2TCbFA2QiilmehPDTXIe684k4rZI1yl3A1PCUw=="],
 
